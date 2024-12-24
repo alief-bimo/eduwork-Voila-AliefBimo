@@ -28,15 +28,15 @@ Cypress.Commands.add('login', (username, password) => {
     cy.clearCookies()
     cy.clearLocalStorage()
 
-    cy.get('[data-test-id="CT_component_login_input"]').clear()
+    cy.get('[data-test-id="CT_component_login_input"]').clear({force: true})
     cy.get('[data-test-id="CT_component_login_input"]').type(username)
     //cy.get('[data-test-id="CT_component_login_input"]').should('have.value', username)
     
-    cy.get('[data-test-id="CT_component_password_input"]').clear()
+    cy.get('[data-test-id="CT_component_password_input"]').clear({force: true})
     cy.get('[data-test-id="CT_component_password_input"]').type(password)
     //cy.get('[data-test-id="CT_component_password_input"]').should('have.value', password)
 
-    cy.get('[data-test-id="CT_component_login_submit"]').click();
+    cy.get('[data-test-id="CT_component_login_submit"]').click({force: true});
 })
 
 Cypress.Commands.add('addToCart', (product) => {
@@ -56,11 +56,9 @@ Cypress.Commands.add('searchItem', (keyword) => {
 })
 
 Cypress.Commands.add('register', (username,password) => {
-    cy.get('[data-test-id="CT_component_identifier_input"]').clear()
+    cy.get('[data-test-id="CT_component_identifier_input"]').clear({force: true})
     cy.get('[data-test-id="CT_component_identifier_input"]').type(username)
     
-    cy.get('[data-test-id="CT_component_password_input"]').clear()
+    cy.get('[data-test-id="CT_component_password_input"]').clear({force: true})
     cy.get('[data-test-id="CT_component_password_input"]').type(password)
-
-    
 })

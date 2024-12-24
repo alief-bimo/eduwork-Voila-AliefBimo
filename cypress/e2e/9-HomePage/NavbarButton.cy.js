@@ -37,53 +37,53 @@ describe('Validate the function of buttons on navbar', () => {
     });
 
     //Test Case Watches Button
-    // it('Should verify watches button', () => {
-    //     cy.wait(8000)
-    //     cy.get('[data-test-id="CT_home_navbar_second-tier-button-14"]').click()
-    //     cy.url().should('include','/gender/women-s-watches-591')
-    //     cy.get('h1').should('have.text', "Women's Watches")
-    //     //cy.get('#plp-product-list-48270').should('contain.text','Preorder')
-    // });
+    it('Should verify watches button', () => {
+        cy.wait(8000)
+        cy.get('[data-test-id="CT_home_navbar_second-tier-button-14"]').click()
+        cy.url().should('include','/gender/women-s-watches-591')
+        cy.get('h1').should('have.text', "Women's Watches")
+        //cy.get('#plp-product-list-48270').should('contain.text','Preorder')
+    });
 
     //Test Case Hermes Button
-    // it('Should verify Hermès button', () => {
-    //     cy.wait(8000)
-    //     cy.get('[data-test-id="CT_home_navbar_second-tier-button-13"]').click()
-    //     cy.url().should('include','/collections/women-s-hermes-collection-762')
-    //     cy.get('#plp-product-list-48228 > ._1nvnchg4 > .j1jih7ap > ._17zx15te8 > #base').should('have.text','Hermès')
-    // });
+    it('Should verify Hermès button', () => {
+        cy.wait(8000)
+        cy.get('[data-test-id="CT_home_navbar_second-tier-button-13"]').click()
+        cy.url().should('include','/collections/women-s-hermes-collection-762')
+        cy.get('#plp-product-list-48228 > ._1nvnchg4 > .j1jih7ap > ._17zx15te8 > #base').should('have.text','Hermès')
+    });
 
     //Test Case Accessories Button
-    // it('Should verify Accessories button', () => {
-    //     cy.wait(8000)
-    //     cy.get('[data-test-id="CT_home_navbar_second-tier-button-12"]').click()
-    //     cy.url().should('include','/gender/women-s-accessories-352')
-    //     cy.get('h1').should('have.text',"Women's Accessories")
-    // });
+    it('Should verify Accessories button', () => {
+        cy.wait(8000)
+        cy.get('[data-test-id="CT_home_navbar_second-tier-button-12"]').click()
+        cy.url().should('include','/gender/women-s-accessories-352')
+        cy.get('h1').should('have.text',"Women's Accessories")
+    });
 
     //Test Case Clothing Button
-    // it('Should verify Clothing button', () => {
-    //     cy.wait(8000)
-    //     cy.get('[data-test-id="CT_home_navbar_second-tier-button-11"]').click()
-    //     cy.url().should('include','/gender/women-s-clothes-314')
-    //     cy.get('h1').should('have.text',"Women's Clothes")
-    // });
+    it('Should verify Clothing button', () => {
+        cy.wait(8000)
+        cy.get('[data-test-id="CT_home_navbar_second-tier-button-11"]').click()
+        cy.url().should('include','/gender/women-s-clothes-314')
+        cy.get('h1').should('have.text',"Women's Clothes")
+    });
 
     //Test Case Shoes Button
-    // it('Should verify Shoes button', () => {
-    //     cy.wait(8000)
-    //     cy.get('[data-test-id="CT_home_navbar_second-tier-button-10"]').click()
-    //     cy.url().should('include','/gender/women-s-shoes-507')
-    //     cy.get('h1').should('have.text',"Women's Shoes")
-    // });
+    it('Should verify Shoes button', () => {
+        cy.wait(8000)
+        cy.get('[data-test-id="CT_home_navbar_second-tier-button-10"]').click()
+        cy.url().should('include','/gender/women-s-shoes-507')
+        cy.get('h1').should('have.text',"Women's Shoes")
+    });
 
     //Test Case Bags Button
-    // it('Should verify Bags button', () => {
-    //     cy.wait(8000)
-    //     cy.get('[data-test-id="CT_home_navbar_second-tier-button-9"]').click()
-    //     cy.url().should('include','/gender/women-s-bags-315')
-    //     cy.get('h1').should('have.text',"Women's Bags")
-    // });
+    it('Should verify Bags button', () => {
+        cy.wait(8000)
+        cy.get('[data-test-id="CT_home_navbar_second-tier-button-9"]').click()
+        cy.url().should('include','/gender/women-s-bags-315')
+        cy.get('h1').should('have.text',"Women's Bags")
+    });
 
     //Test Case New Arrival Button
     it('Should verify New Arrival button', () => {
