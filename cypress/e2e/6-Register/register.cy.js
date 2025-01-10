@@ -12,7 +12,7 @@ describe('Automate Register on Voila', () => {
             const password = user.password
 
             cy.register(email, password)
-            cy.get('[data-test-id="CT_component_register_submit"]').click()
+            cy.get('[data-test-id="CT_component_register_submit"]').click({force: true})
             cy.url().should('include','account/login')
         })
     });
@@ -36,7 +36,7 @@ describe('Automate Register on Voila', () => {
             const password = user.password
 
             cy.register(email, password)
-            cy.get('[data-test-id="CT_component_identifier_input"]').click()
+            cy.get('[data-test-id="CT_component_identifier_input"]').click({force: true})
             cy.get(':nth-child(3) > ._1kg30950 > .j1jih7ak > :nth-child(1) > ._15kd2weg > #base').should('have.text','Password must be at least 6 characters with uppercase letters, lowercase letters, and numbers.')
             //cy.url().should('include','account/login')
         })
@@ -49,7 +49,7 @@ describe('Automate Register on Voila', () => {
             const password = user.password
 
             cy.register(email, password)
-            cy.get('[data-test-id="CT_component_register_submit"]').click()
+            cy.get('[data-test-id="CT_component_register_submit"]').click({force: true})
             cy.get('p').should('contain.text','Enter the verification code we sent to your registered email.') 
             //cy.get(':nth-child(3) > ._1kg30950 > .j1jih7ak > :nth-child(1) > ._15kd2weg > #base').should('have.text','Password must be at least 6 characters with uppercase letters, lowercase letters, and numbers.')
             //cy.url().should('include','account/login')

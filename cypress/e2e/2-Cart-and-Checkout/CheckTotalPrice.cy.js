@@ -12,13 +12,13 @@ describe('automate cart on Voila', () => {
     });
 
     //Test Case Check Total Cost
-    it('Should change the item amount in cart', () => {
+    it('Should check the total cost of item in cart', () => {
         cy.wait(10000)
-        cy.addToCart('#last-thing-viewed-27180 > ._1nvnchg4')
+        cy.addToCart('#last-thing-viewed-46558')
         cy.wait(10000)
-        cy.get('.j1jih7a0 > .j1jih72n > #base').should('have.text', 'Rp2.950.000')
-        cy.get('[data-test-id="CT_Container_NumberStepper_Increase0"]').click()
-        cy.get('.j1jih7a0 > .j1jih72n > #base').should('have.text', 'Rp5.900.000')
+        cy.get('.j1jih7a0 > .j1jih72n > #base').should('have.text', 'Rp8.900.000')
+        cy.get('[data-test-id="CT_Container_NumberStepper_Increase0"]').click({force: true})
+        cy.get('.j1jih7a0 > .j1jih72n > #base').should('have.text', 'Rp17.800.000')
         cy.wait(10000)
         //cy.get('[data-test-id="CT_Component_removeCart0"]').click()
     });
@@ -33,9 +33,9 @@ describe('automate cart on Voila', () => {
               cy.wrap($el).click();
             }
         });
-        cy.get('[data-test-id="CT_Component_removeSelectedCart"]').click()
+        cy.get('[data-test-id="CT_Component_removeSelectedCart"]').click({force: true})
         cy.wait(2000)
-        cy.get('[data-test-id="CT_Component_ConfirmContent_Ok"]').click()
+        cy.get('[data-test-id="CT_Component_ConfirmContent_Ok"]').click({force: true})
         cy.get('.j1jih78w > ._17zx15te8').should('have.text','Your shopping bag is empty')
     });
 

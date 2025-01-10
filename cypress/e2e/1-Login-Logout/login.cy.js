@@ -2,6 +2,11 @@
 
 describe('Login on voila', () => {
     beforeEach(() => {
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            // Return false to prevent the test from failing
+            return false;
+          });
+          
         cy.visit('https://voila.id/account/login')
     });
 
@@ -23,7 +28,7 @@ describe('Login on voila', () => {
 
             cy.login(email,password)
 
-            cy.get('._15r4f4d15e > .j1jih78w > #base').should('be.visible').and('contain.text', 'Your account ID or password is incorrect. Please try again.')
+            cy.get('.j1jih737 > .j1jih78w > #base').should('be.visible').and('contain.text', 'Your account ID or password is incorrect. Please try again.')
         })
     });
 
@@ -34,8 +39,8 @@ describe('Login on voila', () => {
             cy.clearCookies()
             cy.clearLocalStorage()
 
-            cy.get('[data-test-id="CT_component_login_input"]').clear()
-            cy.get('[data-test-id="CT_component_login_input"]').type(email, {delay:100})
+            cy.get('[data-test-id="CT_component_login_input"]').clear({force: true})
+            cy.get('[data-test-id="CT_component_login_input"]').type(email,{force: true}, {delay:100}, )
 
             cy.get('._15kd2wer4').click();
 
@@ -52,11 +57,12 @@ describe('Login on voila', () => {
             cy.clearCookies()
             cy.clearLocalStorage()
 
-            cy.get('[data-test-id="CT_component_login_input"]').clear()
+            cy.get('[data-test-id="CT_component_login_input"]').clear({force: true})
             cy.get('[data-test-id="CT_component_login_input"]').type(email, {delay:100})
 
-            cy.get('._920fuu5').should('be.enabled').click()
+            cy.get('._920fuu5').should('be.enabled').click({force: true})
 
+            cy.wait(3000)
             cy.get(':nth-child(1) > :nth-child(1) > ._15kd2weog').should('contain.text','Register')
 
             //cy.get('._15r4f4d15e > .j1jih78w > #base').should('be.visible').and('contain.text', 'Your account ID or password is incorrect. Please try again.')

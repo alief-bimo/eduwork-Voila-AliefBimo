@@ -2,13 +2,13 @@
 
 describe('Automate Filter based on gender Viola', () => {
     beforeEach(() => {
-        cy.visit('https://voila.id/account/login')
-        cy.fixture("validUser").then(user => {
-            const email = user.email
-            const password = user.password
+        cy.visit('https://voila.id/')
+        // cy.fixture("validUser").then(user => {
+        //     const email = user.email
+        //     const password = user.password
 
-            cy.login(email,password)
-        }) 
+        //     cy.login(email,password)
+        // }) 
     });
 
     //Test Case Filter search result for women

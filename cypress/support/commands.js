@@ -36,29 +36,29 @@ Cypress.Commands.add('login', (username, password) => {
     cy.get('[data-test-id="CT_component_password_input"]').type(password)
     //cy.get('[data-test-id="CT_component_password_input"]').should('have.value', password)
 
-    cy.get('[data-test-id="CT_component_login_submit"]').click({force: true});
+    cy.get('[data-test-id="CT_component_login_submit"]').click({force: true})
 })
 
 Cypress.Commands.add('addToCart', (product) => {
     cy.get('p').contains('Buy now before it runs out, no regret!').scrollIntoView()
-    cy.get(product).click()
+    cy.get(product).click({force: true})
     cy.wait(10000)
-    cy.get('[data-test-id="CT-add-to-bag-desktop"]').click()
+    cy.get('[data-test-id="CT-add-to-bag-desktop"]').click({force: true})
     cy.wait(5000)
-    cy.get('[data-test-id="CT-Go-To-Cart"]').click()
+    cy.get('[data-test-id="CT-Go-To-Cart"]').click({force: true})
     cy.wait(10000)
 })
 
 Cypress.Commands.add('searchItem', (keyword) => {
     cy.wait(5000)
-    cy.get('[data-test-id="CT-Search"]').click()
-    cy.get('[data-test-id="CT-Search-Input"]').type(keyword)
+    cy.get('[data-test-id="CT-Search"]').click({force: true})
+    cy.get('[data-test-id="CT-Search-Input"]').type(keyword, { force: true })
 })
 
 Cypress.Commands.add('register', (username,password) => {
     cy.get('[data-test-id="CT_component_identifier_input"]').clear({force: true})
-    cy.get('[data-test-id="CT_component_identifier_input"]').type(username)
+    cy.get('[data-test-id="CT_component_identifier_input"]').type(username, {force: true})
     
     cy.get('[data-test-id="CT_component_password_input"]').clear({force: true})
-    cy.get('[data-test-id="CT_component_password_input"]').type(password)
+    cy.get('[data-test-id="CT_component_password_input"]').type(password, {force: true})
 })

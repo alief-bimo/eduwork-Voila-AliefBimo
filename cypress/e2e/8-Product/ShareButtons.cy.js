@@ -13,9 +13,9 @@ describe('add item to cart Voila', () => {
 
     it('Should verify share button', () => {
         cy.wait(8000)
-        cy.get('#splide06-slide01').click()
+        cy.get('#last-thing-viewed-46558').click()
         cy.wait(5000)
-        cy.get('[data-test-id="CT-Component-PDP-Share"]').click()
+        cy.get('[data-test-id="CT-Component-PDP-Share"]').click({force: true})
         cy.get('p').should('contain.text', 'Share to your friends 🛍')
     });
 

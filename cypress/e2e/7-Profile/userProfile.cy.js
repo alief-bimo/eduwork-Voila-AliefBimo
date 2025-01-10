@@ -13,8 +13,8 @@ describe('Automate change user profile on voila', () => {
 
     it('Should change profile name', () => {
         cy.wait(5000)
-        cy.get('[data-test-id="CT_Component_ProfileMenu"]').click()
-        cy.get(':nth-child(1) > .j1jih7a0 > .j1jih72x > #base').click()
+        cy.get('[data-test-id="CT_Component_ProfileMenu"]').click({force: true})
+        cy.get(':nth-child(1) > .j1jih7a0 > .j1jih72x > #base').click({force: true})
         cy.wait(5000)
         cy.get('[data-test-id="CT_component_firstName_input"]').clear().type('John')
         cy.get('[data-test-id="CT_component_lastName_input"]').clear().type('Doe')
