@@ -15,7 +15,9 @@ describe('Login on voila', () => {
             const email = user.email
             const password = user.password
 
-            cy.login(email,password, {delay:5000})
+            cy.login(email,password)
+            cy.wait(5000)
+            cy.get('[data-test-id="CT_Component_profileMenu"]').should('contain.text','Alief Bimo')
 
             //cy.get('._15r4f4d15e > .j1jih78w > #base').should('be.visible').and('contain.text', 'Your account ID or password is incorrect. Please try again.')
         })

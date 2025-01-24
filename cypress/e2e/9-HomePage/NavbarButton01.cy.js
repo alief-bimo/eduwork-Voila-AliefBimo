@@ -18,7 +18,7 @@ describe('Validate the function of buttons on navbar', () => {
         cy.wait(8000)
         cy.get('[data-test-id="CT_home_navbar_second-tier-button-15"]').click({force: true})
         cy.url().should('include','/collections/women-s-preorder-712')
-        cy.get('#plp-product-list-48270').should('contain.text','Preorder')
+        cy.get('#plp-product-list-49897').should('contain.text','Preorder')
     });
 
     //Test Case Watches Button

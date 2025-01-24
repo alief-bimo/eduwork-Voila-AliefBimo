@@ -18,6 +18,7 @@ describe('Logout on Voila', () => {
             cy.get('[data-test-id="Container_Logout"] > ._1ugu32j0 > ._1ugu32j1').click({force: true})
             cy.get('[data-test-id="CT_SignOut_Confirm"]').click({force: true})
             cy.url().should('eq', 'https://voila.id/');
+            cy.get('[data-test-id="CT-SignIn-Btn"]').should('be.visible')
             
         })
     });

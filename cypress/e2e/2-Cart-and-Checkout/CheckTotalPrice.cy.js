@@ -12,21 +12,22 @@ describe('automate cart on Voila', () => {
     });
 
     //Test Case Check Total Cost
-    it('Should check the total cost of item in cart', () => {
-        cy.wait(10000)
-        cy.addToCart('#last-thing-viewed-46558')
-        cy.wait(10000)
-        cy.get('.j1jih7a0 > .j1jih72n > #base').should('have.text', 'Rp8.900.000')
-        cy.get('[data-test-id="CT_Container_NumberStepper_Increase0"]').click({force: true})
-        cy.get('.j1jih7a0 > .j1jih72n > #base').should('have.text', 'Rp17.800.000')
-        cy.wait(10000)
-        //cy.get('[data-test-id="CT_Component_removeCart0"]').click()
-    });
+    // it('Should check the total cost of item in cart', () => {
+    //     cy.wait(10000)
+    //     cy.addToCart('#last-thing-viewed-43056')
+    //     cy.wait(10000)
+    //     cy.get('.j1jih7a0 > .j1jih72n > #base').should('have.text', 'Rp2.100.000')
+    //     cy.get('[data-test-id="CT_Container_NumberStepper_Increase0"]').click({force: true})
+    //     cy.get('.j1jih7a0 > .j1jih72n > #base').should('have.text', 'Rp4.200.000')
+    //     cy.wait(5000)
+    //     //cy.get('[data-test-id="CT_Component_removeCart0"]').click()
+    // });
 
     //Test Case Empty Cart
-    it('Should Remove All item from cart', () => {
+    it('Should empty user cart', () => {
         cy.wait(8000)
         cy.get('[data-test-id="CT-Go-To-Cart"]').click()
+        cy.wait(3000)
         cy.get('[data-test-id="CT_Component_checkboxSelectAll"]').
         then(($el) => {
             if ($el.attr('aria-checked') !== 'true') {

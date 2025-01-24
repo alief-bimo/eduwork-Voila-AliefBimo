@@ -32,6 +32,7 @@ describe('Automate Wishlist on Viola', () => {
     it('Should Remove item from whistlist', () => {
         cy.wait(8000)
         cy.get('[data-test-id="CT-wishlist-link"]').click({force: true})
+        cy.wait(3000)
         cy.get('[data-test-id="CT-Wishlist-Edit"]').click({force: true})
         cy.get('[data-test-id="CT-Wishlist-List-Item-Wrapper"]').click({force: true})
         cy.get('[data-test-id="CT-Wishlist-Remove"]').click({force: true})

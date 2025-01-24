@@ -15,7 +15,7 @@ describe('Automate Search on Viola', () => {
     it('Should search for item using valid keywords', () => {
         cy.searchItem('nike{enter}')
         cy.wait(5000)
-        cy.get('#search-result-product-list-43056 > ._1nvnchg4 > .j1jih7ap > ._17zx15te8 > #base').should('have.text','Nike')
+        cy.get('._15kd2wets > #base').should('have.text','Nike')
     });
 
     //Test Case Search Item Using Invalid Keywords

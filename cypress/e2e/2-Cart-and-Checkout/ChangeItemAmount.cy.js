@@ -15,7 +15,7 @@ describe('add item to cart Voila', () => {
     //Test Case Change Item amount
     it('Should change the item amount in cart', () => {
         cy.wait(10000)
-        cy.addToCart('#last-thing-viewed-46558')
+        cy.addToCart('#last-thing-viewed-43056')
         cy.wait(10000)
         cy.get('[class="wovzo9l  _17zx15t1c _17zx15tg0"]').should('have.text', '1')
         cy.get('[data-test-id="CT_Container_NumberStepper_Increase0"]').click({force: true})
